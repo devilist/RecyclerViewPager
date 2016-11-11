@@ -1,4 +1,4 @@
-package com.devilist.recyclerviewpager;
+package com.devilist.rvp;
 
 import org.junit.Test;
 

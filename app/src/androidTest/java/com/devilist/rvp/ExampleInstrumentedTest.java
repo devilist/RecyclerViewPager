@@ -1,4 +1,4 @@
-package com.devilist.recyclerviewpager;
+package com.devilist.rvp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

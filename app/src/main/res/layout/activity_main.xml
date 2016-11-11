@@ -1,17 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/rl_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.devilist.recyclerviewpager.MainActivity">
+    android:background="#7c4dff">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="bottom"
+        android:paddingLeft="10dp"
+        android:text="更美应用"
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
+    <!--RefreshRecyclerViewPager + Indicator-->
+
+
+    <com.devilist.recyclerviewpager.AnimPagerIndicator
+        android:id="@+id/view_indictor"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom">
+
+    </com.devilist.recyclerviewpager.AnimPagerIndicator>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/view_indictor"
+        android:layout_below="@id/tl_toolbar">
+
+        <com.devilist.recyclerviewpager.RefreshRecyclerViewPager
+            android:id="@+id/rrvp_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.devilist.recyclerviewpager.RecyclerViewPager
+                android:id="@+id/rvp_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </com.devilist.recyclerviewpager.RecyclerViewPager>
+
+        </com.devilist.recyclerviewpager.RefreshRecyclerViewPager>
+
+    </FrameLayout>
+
+
 </RelativeLayout>
